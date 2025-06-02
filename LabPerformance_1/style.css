@@ -1,0 +1,92 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+}
+
+header {
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.navbar .logo {
+  font-weight: bold;
+  color: #0044cc;
+}
+
+.navbar nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.nav-actions input {
+  padding: 5px;
+}
+
+.nav-actions button {
+  margin-left: 10px;
+  padding: 6px 10px;
+}
+
+.hero {
+  background: #1c1f3b;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.hero-buttons button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  background: #0044cc;
+  color: white;
+  cursor: pointer;
+}
+
+.hero-buttons .login {
+  background: #007bff;
+}
+
+.resources {
+  padding: 2rem;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card button {
+  margin-top: 1rem;
+  padding: 8px 16px;
+  background: #0044cc;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
