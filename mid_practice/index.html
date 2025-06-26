@@ -11,27 +11,43 @@
 <body>
     <h1>Fill This Form</h1>
     <script>
-
-
         function data(){
-        var a = document.getElementById('name1').value;
-        var b = document.getElementById('email1').value;
-        var c = document.getElementById('number1').value;
-        var d = document.getElementById('password1').value;
+        var a = document.getElementById("name1").value;
+        var b = document.getElementById("email1").value;
+        var c = document.getElementById("number1").value;
+        var d = document.getElementById("password1").value;
+        var e = document.getElementById("password2").value;
 
-        if (a=="") {
+        if (a==""||b==""||c==""||d==""||e=="") {
             alert("name is empty ! FillUp Your name");
+            return false;
+        }
+        else if(c.length<11 || c.length>11){
+            alert("the number must 11 digit");
+            return false;
+        }
+        else if(d.length<6){
+            alert("Paswword at least 6 character");
+            return false;
+        }
+        else if(d!=e){
+            alert("confirm password must match password");
+            return false;
+        }
+        else{
+            return true;
         }
     }
 
     </script>
     <Form onsubmit="data()">
         Enter Your name : <input type="text" id="name1" value="">
-        <br>
-        Enter Your Email : <input type="email" id="email1"><br>
-        Enter Your Mobile Number : <input type="number" id="number1"><br>
-        Password : <input type="password" id="password1"><br>
-        <input type="button" value="Button">
+        <br><br>
+        Enter Your Email : <input type="email" id="email1"><br><br>
+        Enter Your Mobile Number : <input type="text" id="number1"><br><br>
+        Password : <input type="password" id="password1"><br><br>
+        Confirm Password : <input type="password" id="password2"><br><br>
+        <button type="submit">Submit</button>
     </Form>
 </body>
 
