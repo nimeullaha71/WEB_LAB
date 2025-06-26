@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="script.js"></script> -->
+</head>
+
+<body>
+    <h1>Fill This Form</h1>
+    <script>
+
+
+        function data(){
+        var a = document.getElementById('name1').value;
+        var b = document.getElementById('email1').value;
+        var c = document.getElementById('number1').value;
+        var d = document.getElementById('password1').value;
+
+        if (a=="") {
+            alert("name is empty ! FillUp Your name");
+        }
+    }
+
+    </script>
+    <Form onsubmit="data()">
+        Enter Your name : <input type="text" id="name1" value="">
+        <br>
+        Enter Your Email : <input type="email" id="email1"><br>
+        Enter Your Mobile Number : <input type="number" id="number1"><br>
+        Password : <input type="password" id="password1"><br>
+        <input type="button" value="Button">
+    </Form>
+</body>
+
+</html>
