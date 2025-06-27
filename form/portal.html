@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="'en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Portal</title>
+</head>
+
+<body>
+    <div class="head">
+        <h1 class="portal">Student Registation Portal</h1>
+    </div>
+    
+
+    <div class="div">
+        <p style="color: darkcyan;font-weight: bold;"> Course Schedule : </p>
+        <table class="table" border="1" style="border-collapse:collapse;">
+            <tr>
+                <td class="content" rowspan="2">Day</td>
+                <td class="content" colspan="2">Time</td>
+            </tr>
+            <tr>
+                <td class="content">Start</td>
+                <td class="content">End</td>
+            </tr>
+            <tr>
+                <td class="content">Sunday</td>
+                <td class="content">9:00AM</td>
+                <td class="content">12:00PM</td>
+            </tr>
+            <tr>
+                <td class="content">Monday</td>
+                <td class="content" colspan="2">10:00AM - 1:00PM</td>
+            </tr>
+
+        </table>
+
+    </div>
+    <br>
+    <div class="div">
+        <form onsubmit="data(event)" action="">
+            <p style="color: darkcyan; font-weight:bold">Registration Here : </p>
+            <p>Name : <input id="name" type="text"></p>
+            <p id="name_error"></p>
+            <p>Email: <input id="email" type="text"></p>
+            <p id="email_error"></p>
+            <p>Password : <input id="password" type="password"></p>
+            <p id="password_error"></p>
+            <p>Gender : <label for="">
+                    <input type="radio" name="Gender" value="Male">Male</label>
+                <label for=""><input type="radio" name="Gender" value="Female">Female</label>
+                <br>
+            </p>
+
+            <button style="background-color: greenyellow;" type="submit">Submit</button>
+        </form>
+
+    </div>
+
+    <script>
+        function data(event) {
+            event.preventDefault();
+            var a = document.getElementById("name").value;
+            var b = document.getElementById("email").value;
+            var c = document.getElementById("password").value;
+
+            if (a.length < 3) {
+                document.getElementById("name_error").innerText = "name at least 3 character"
+            }
+
+            var regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!regexEmail.test(b)) {
+                document.getElementById("email_error").innerText = "Email is invalid";
+            }
+            if (c.length < 6) {
+                document.getElementById("password_error").innerText = "password at least 6 character";
+            }
+            else {
+                alert("Form submission successfull");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
