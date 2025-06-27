@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form</title>
+    </head>
+    <body>
+
+        <script>
+            function data(event){
+                
+                event.preventDefault();
+                var a = document.getElementById("name").value;
+                var b = document.getElementById("email").value;
+                var c = document.getElementById("password").value;
+                var d = document.getElementById("cofirm_pass").value;
+
+                if(a.length<6){
+                    document.getElementById("name_error").innerText="name at least 6 character";
+                }
+                var regexEmail= /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                if(!regexEmail.test(b)){
+                    document.getElementById("email_error").innerText="email is invalid";
+                }
+                
+
+                if(c.length<6){
+                    document.getElementById("pass_error").innerText="password at least 6 character";
+                }
+                if(c!=d){
+                    document.getElementById("confirm_pass_error").innerText="password don't match"
+                }
+
+                else{
+                    alert("successful");
+                }
+           
+            }
+
+
+        </script>
+
+
+
+        <form onsubmit="data(event)" action="">
+            <p>Name : <input id="name" type="text"></p>
+            <p id="name_error"></p>
+            <p>Email : <input id="email" type="text"></p>
+            <p id="email_error"></p>
+            <p>Password : <input id="password" type="password"></p>
+            <p id="pass_error"></p>
+            <p>Confirm password : <input id="cofirm_pass" type="password"></p>
+            <p id="confirm_pass_error"></p>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>
